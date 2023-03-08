@@ -6,10 +6,11 @@ var logger = require("morgan");
 
 // IMPORTS
 var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
 var customerRouter = require("./routes/customer");
 var productRouter = require("./routes/product");
 var employeeRouter = require("./routes/employee");
+var categoriesRouter = require("./routes/categories");
+var suppliersRouter = require("./routes/suppliers");
 
 var app = express();
 
@@ -25,10 +26,12 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // REGISTER ROUTERS
 app.use("/", indexRouter);
-app.use("/users", usersRouter);
 app.use("/customer", customerRouter);
 app.use("/product", productRouter);
 app.use("/employee", employeeRouter);
+app.use("/categories", categoriesRouter);
+app.use("/suppliers", suppliersRouter);
+
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
