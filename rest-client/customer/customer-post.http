@@ -2,7 +2,10 @@ POST http://localhost:3000/customer HTTP/1.1
 content-type: application/json
 
 { 
-    "name": "Peter",
-     "email": "peter@gmail.com",
-      "address": "USA" 
+    "firstname": "Minh Lanh",
+    "lastname": "Nguyen",
+    "phonenumber": "0898543637",
+      "address": "33 Dai Loc, Quang Nam",
+      "birthday": "1990-01-11",
+      "email": "minhlanhqn@gmail.com"
 }
